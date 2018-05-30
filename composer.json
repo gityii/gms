@@ -1,0 +1,14 @@
+{
+    "require": {
+        "yiisoft/yii2-codeception": "^2.0",
+        "qcloud/weapp-sdk": "^2.1",
+        "dmstr/yii2-adminlte-asset": "2.*"
+    },
+
+"repositories": {
+	"packagist": {
+		   "type": "composer",
+		"url": "https://packagist.phpcomposer.com"
+	}
+}
+}
