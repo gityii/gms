@@ -54,7 +54,7 @@ class Comment extends \yii\db\ActiveRecord
             'email' => 'Email',
             'url' => 'Url',
             'post_id' => '文章',
-            'remind' => 'Remind',
+            'remind' => '是否提醒',
         ];
     }
 
@@ -103,6 +103,13 @@ class Comment extends \yii\db\ActiveRecord
             return true;
         }
         else  return false;
+    }
+
+
+    public static function findRecentComments($limit=10)
+    {
+        return Comment::find()->where(['status'=>2])->orderBy('create_time DESC')
+            ->limit($limit)->all();
     }
 
 }
